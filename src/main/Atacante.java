@@ -6,8 +6,15 @@ public class Atacante implements Cloneable{
     private String nome;
     private Desempenho desempenho;
     private String localNascimento;
-    private String cpf;
     private String time;
+
+    public Atacante(int id, String nome, Desempenho desempenho, String localNascimento, String time) {
+        this.id = id;
+        this.nome = nome;
+        this.desempenho = desempenho;
+        this.localNascimento = localNascimento;
+        this.time = time;
+    }
 
     public int getId() {
         return id;
@@ -33,12 +40,6 @@ public class Atacante implements Cloneable{
     public void setLocalNascimento(String localNascimento) {
         this.localNascimento = localNascimento;
     }
-    public String getCpf() {
-        return cpf;
-    }
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
     public String getTime() {
         return time;
     }
@@ -60,7 +61,6 @@ public class Atacante implements Cloneable{
         return "Atacante{" +
                 "id=" + id +
                 ", nome='" + nome + '\'' +
-                ", cpf='" + cpf + '\'' +
                 ", time='" + time + '\'' +
                 ", desempenho=" + desempenho +
                 ", localNascimento='" + localNascimento + '\'' +

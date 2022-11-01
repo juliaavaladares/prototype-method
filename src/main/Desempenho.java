@@ -7,13 +7,13 @@ public class Desempenho implements Cloneable{
     private Integer partidasJogadas;
     private Integer cartoesLevados;
 
-    public Desempenho(String posicao, float numeroDeGols, float golsPorPartida, Integer partidasJogadas,
-    Integer cartoesLevados) {
+    public Desempenho(String posicao, float numeroDeGols, Integer partidasJogadas,Integer cartoesLevados) {
         this.posicao = posicao;
         this.numeroDeGols = numeroDeGols;
-        this.golsPorPartida = golsPorPartida;
         this.partidasJogadas = partidasJogadas;
         this.cartoesLevados = cartoesLevados;
+
+        golsPorPartida = numeroDeGols/partidasJogadas;
     }
 
     public String getPosicao() {
@@ -55,10 +55,10 @@ public class Desempenho implements Cloneable{
     @Override
     public String toString() {
         return "Desempenho{" +
-                "posicao='" + posicao + '\'' +
-                "numeroDeGols='" + numeroDeGols + '\'' +
-                "golsPorPartida='" + golsPorPartida + '\'' +
-                "partidasJogadas='" + partidasJogadas + '\'' +
+                "posicao='" + posicao + '\'' + "," +
+                "numeroDeGols=" + numeroDeGols + "," +
+                "golsPorPartida=" + golsPorPartida + "," +
+                "partidasJogadas=" + partidasJogadas +
                 ", cartoesLevados=" + cartoesLevados +
                 '}';
     }
